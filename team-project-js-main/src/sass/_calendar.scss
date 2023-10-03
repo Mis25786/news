@@ -1,0 +1,95 @@
+/*  Перебивання дефолтних стилів календаря: */
+
+.air-datepicker.custom-air-datepicker {
+  --adp-cell-background-color-selected: #4440f6;
+  --adp-color-current-date: #4440f6;
+  --adp-cell-background-color-selected-hover: #4440f6;
+  --adp-color: #000000;
+  --adp-nav-color-secondary: #000000;
+  --adp-transition-offset: -10px;
+
+  width: 250px;
+  border: none;
+  border-radius: 20px;
+  background: #f8f8f8;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+}
+
+.air-datepicker--pointer {
+  display: none;
+}
+
+/* стилі для сторінки, яка завантажується, якщо нічого не знайдено по вибраній даті: */
+
+main {
+  overflow: hidden;
+}
+
+.no-results-wrap {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.no-results-text {
+  margin-bottom: 40px;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #111321;
+
+  body.dark-theme & {
+    color: var(--primary-light-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+
+.no-results-bgr {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 200px;
+
+  background-image: url(../images/not-found-img-phone-1x.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/not-found-img-phone-2x.png);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 560px;
+    height: 445px;
+    background-image: url(../images/not-found-img-tablet-1x.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/not-found-img-tablet-2x.png);
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 600px;
+      height: 480px;
+      background-image: url(../images/not-found-img.png);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/not-found-img-desktop-2x.png);
+      }
+    }
+  }
+}

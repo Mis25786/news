@@ -1,0 +1,28 @@
+.favorite-pudding-b {
+  padding-bottom: 40px;
+}
+
+.box-news__btn {
+  position: absolute;
+  top: 355px;
+  right: 12px;
+  width: auto;
+  height: 28px;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-dark-color);
+  background-color: var(--primary-light-color);
+  font-family: 'Manrope500', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.box-news__btn-icon {
+  color: currentColor;
+  background-image: url(../images/akar-icons_heart-filled.svg);
+}

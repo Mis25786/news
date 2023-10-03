@@ -1,0 +1,229 @@
+.box-news {
+  margin-top: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+
+.box-news__item {
+  position: relative;
+  height: 675px;
+  overflow: hidden;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+  0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  @media screen and (max-width: 767px) {
+    height: 630px;
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1280px) {
+    width: calc((100% - 64px) / 3);
+  }
+}
+
+.box-news__section {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  min-width: 112px;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 0px 4px 4px 0px;
+  color: var(--secondary-light-color);
+  background: var(--accent-card-btn-bg-color);
+  font-family: 'Manrope500', sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    top: 44px;
+  }
+}
+
+.box-news___wrap-reading {
+  display: none;
+  opacity: 0;
+}
+
+li.show .box-news___wrap-reading {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  min-width: 112px;
+  height: 24px;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--accent-card-btn-bg-color);
+  z-index: 9;
+  @media screen and (min-width: 768px) {
+    top: 44px;
+  }
+}
+
+.box-news__reading {
+  color: var(--secondary-light-color);
+  font-family: 'Manrope500', sans-serif;
+  font-size: 12px;
+  line-height: 1, 36;
+}
+
+.box-news__thumb {
+  width: 100%;
+  height: 395px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: rgb(129, 188, 231);
+}
+
+.box-news__img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.box-news__wrap-title {
+  height: 99px;
+  margin-bottom: 20px;
+  overflow-y: scroll;
+  overflow-y: hidden;
+  @media screen and (min-width: 768px) {
+    height: 132px;
+  }
+}
+
+.box-news__titel {
+  padding: 0 4px;
+  font-family: 'Manrope700', sans-serif;
+  font-size: 24px;
+  line-height: 1.38;
+  letter-spacing: 0.01em;
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.box-news__wrap-text {
+  height: 57px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    height: 66px;
+  }
+}
+
+.box-news__text {
+  padding: 0 4px;
+  font-family: 'Manrope400', sans-serif;
+  font-size: 14px;
+  line-height: 1.36;
+  @media screen and (min-width: 768px) {
+    font-style: 16px;
+    line-height: 1.38;
+  }
+}
+
+.box-news__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-news__data {
+  color: var(--light-text-color);
+  font-family: 'Manrope400', sans-serif;
+  font-size: 14px;
+  line-height: 1.36;
+  padding-left: 4px;
+  @media screen and (min-width: 768px) {
+    font-style: 16px;
+    line-height: 1.36;
+  }
+}
+
+.box-news__link {
+  color: var(--accent-primary-color);
+  font-family: 'Manrope400', sans-serif;
+  font-size: 14px;
+  line-height: 1.36;
+  padding-right: 4px;
+  @media screen and (min-width: 768px) {
+    font-style: 16px;
+    line-height: 1.36;
+  }
+}
+
+li.show .overlay {
+  transform: translatex(0);
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+
+  transform: translatex(-100%);
+  transition: transform var(--timing-function);
+}
+
+.box-news__favorite-btn {
+  position: absolute;
+  top: 355px;
+  right: 12px;
+  min-width: 126px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 20px;
+  border: none;
+  background: var(--secondary-light-color);
+}
+
+.box-news__favorite-btn.favorite .box-news__favorite-p {
+  padding-left: 6px;
+}
+
+.box-news__favorite-btn.favorite .box-news__favorite-svg {
+  padding-right: 6px;
+  fill: var(--accent-third-color);
+}
+
+.box-news__favorite-p {
+  font-family: 'Manrope500', sans-serif;
+  font-size: 12px;
+  line-height: 1.33;
+  text-align: center;
+}
+
+.box-news__favorite-svg {
+  width: auto;
+  height: auto;
+  fill: none;
+}
+
+body.dark-theme .box-news__favorite-p {
+  color: var(--primary-dark-color);
+}
